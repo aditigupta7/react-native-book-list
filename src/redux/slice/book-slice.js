@@ -49,6 +49,7 @@ const booksSlice = createSlice({
     });
     builder.addCase(fetchBooksList.fulfilled, (state, action) => {
       state.booksList = action.payload;
+      state.filterData = action.payload;
       state.isLoading = false;
       state.status = 'fulfilled';
     });

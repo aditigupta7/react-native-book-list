@@ -50,7 +50,7 @@ export default function BookList({navigation}) {
   useEffect(() => {
     dispatch(fetchBooksList());
     return () => {};
-  }, [dispatch, active]);
+  }, [dispatch]);
 
   // eslint-disable-next-line react/no-unstable-nested-components
   const ListItem = ({data}) => {
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
   buttonView: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginVertical: WD(5),
+    marginVertical: WD(1),
     alignItems: 'center',
   },
   filterStyle: {
